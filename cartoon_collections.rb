@@ -24,10 +24,19 @@ def long_planeteer_calls(planeteer_calls)
 end
 
 def find_the_cheese(cheddar_cheese)
-cheddar_cheese.find do|theCheese|
-theCheese.include?("cheddar")
+  #cheddar_cheese.find do|theCheese|
+  #  theCheese.include?("cheddar")
+  #end
 
+  # cheddar_cheese => [ "cheddar", "cherry", "orange"]
+  list_of_cheese = ["cheddar", "swiss", "pepperjack"]
 
-
+  cheddar_cheese.find do |food|
+    # food => "cheddar"
+    list_of_cheese.include?(food)
+  end
 end
-end
+
+#find_the_cheese([ "cheddar", "cherry", "orange"])
+#find_the_cheese(["apple", "banana", "swiss"])
+# find_the_cheese(["apple", "cheddar", "swiss"])
